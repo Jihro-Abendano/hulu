@@ -1,14 +1,15 @@
 import React from "react";
-import "../styles/Header.scss"; // adjust path as necessary
+import "../styles/Header.scss";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
-    <nav>
-      <div>
-        <img src="/assets/logo.png" alt="Logo" style={{ height: "40px" }} />
-      </div>
-      <div>LOG IN</div>
-    </nav>
+    <header>
+      <nav>
+        <img src={logo} alt="Logo" />
+        <div>LOG IN</div>
+      </nav>
+    </header>
   );
 };
 
