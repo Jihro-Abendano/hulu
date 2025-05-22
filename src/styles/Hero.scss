@@ -1,0 +1,38 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 9rem;
+}
+
+.mid-hero {
+  background: linear-gradient(to right, black, #326786);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  min-height: 130px;
+}
+
+.bot-hero {
+  background: linear-gradient(to top, black, #1ce783);
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 170px;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 600px;
+    line-height: 1.5;
+  }
+}
