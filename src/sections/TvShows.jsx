@@ -52,9 +52,7 @@ const TvShows = () => {
         Location data required to watch certain content. Offer valid for
         eligible subscribers only. See details.
       </p>
-      <a className="view-channels" href="#">
-        VIEW CHANNELS IN YOUR AREA →
-      </a>
+      <button className="view-channels">VIEW CHANNELS IN YOUR AREA →</button>
     </section>
   );
 };

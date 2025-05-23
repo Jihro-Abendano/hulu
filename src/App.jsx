@@ -3,6 +3,7 @@ import "./styles/App.scss";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import TvShows from "./sections/TvShows";
+import Highlights from "./sections/Highlights";
 const App = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const App = () => {
         <Header />
         <Hero />
         <TvShows />
+        <Highlights />
       </div>
     </>
   );
