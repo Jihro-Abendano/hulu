@@ -18,7 +18,7 @@ const HeroCard = ({
           <div className="text-group">
             <h2>{title}</h2>
             <p>{description}</p>
-            <div className="terms">Terms apply</div>
+            <div className="terms">What's included?</div>
           </div>
 
           <div className="button-group">
