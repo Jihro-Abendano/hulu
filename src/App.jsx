@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import TvShows from "./sections/TvShows";
 import Highlights from "./sections/Highlights";
 import Plans from "./sections/Plans";
+import Footer from "./sections/Footer";
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
         <TvShows />
         <Highlights />
         <Plans />
+        <Footer />
       </div>
     </>
   );
