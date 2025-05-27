@@ -31,7 +31,7 @@ const HeroCard = ({
           <h2>{title}</h2>
           <img src={imageSrc} alt={title} className="hero-card-image" />
           <p>{description}</p>
-          {buttonText && <Buttons text={buttonText} />}
+          {buttonText && <Buttons text={buttonText} variant="hero" />}
           <div className="terms">Terms apply</div>
         </>
       )}

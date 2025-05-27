@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: top;
   overflow: hidden;
+  padding: 2rem;
 }
 
 .highlight-tab-container {
@@ -94,5 +95,59 @@
     max-width: 70%;
     max-height: 70%;
     object-fit: contain;
+  }
+}
+
+@media (max-width: 1600px) {
+  .highlight-tab-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 30rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .highlight-tab-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 20rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .highlights {
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+  .highlight-tab-container {
+    padding-right: 0;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .highlight-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo-circles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .highlight-content {
+    padding-top: 10rem;
+  }
+
+  .highlight-content h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

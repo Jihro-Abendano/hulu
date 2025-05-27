@@ -44,7 +44,7 @@ const TvShows = () => {
         access to endless entertainment with Disney+ and live sports with ESPN+.
       </p>
 
-      <Buttons text="START YOUR FREE TRIAL" />
+      <Buttons text="START YOUR FREE TRIAL" variant="tv-shows" />
       <p className="disclaimer">
         Hulu (With Ads) + Live TV plan $82.99/mo. after 3-day free trial (if
         any) unless canceled. Cancel anytime. Regional restrictions, blackouts
@@ -52,7 +52,8 @@ const TvShows = () => {
         Location data required to watch certain content. Offer valid for
         eligible subscribers only. See details.
       </p>
-      <button className="view-channels">VIEW CHANNELS IN YOUR AREA →</button>
+
+      <p className="channel">VIEW CHANNELS IN YOUR AREA →</p>
     </section>
   );
 };
