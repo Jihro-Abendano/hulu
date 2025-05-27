@@ -1,72 +1,73 @@
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 0rem;
-  padding: 2rem 1rem 9rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	// flex-wrap: wrap;
+	gap: 0rem;
+	// padding: 2rem 1rem 9rem;
+	padding-bottom: 5rem;
 
-  .bg-wrapper {
-    background: url("../assets/herobg.jpeg") no-repeat top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+	.bg-wrapper {
+		background: url("../assets/herobg.jpeg") no-repeat top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 .mid-hero {
-  background: linear-gradient(to right, black, #326786);
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-  min-height: 130px;
+	background: linear-gradient(to right, black, #326786);
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	min-height: 130px;
 }
 
 .bot-hero {
-  background: linear-gradient(to top, black, #1ce783);
-  color: white;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 170px;
+	background: linear-gradient(to top, black, #1ce783);
+	color: white;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 170px;
 
-  p {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+	p {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
 }
 
 @media (max-width: 1380px) {
-  .bg-wrapper {
-    background: url("../assets/herobg-tab.jpeg") no-repeat top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+	.bg-wrapper {
+		background: url("../assets/herobg-tab.jpeg") no-repeat top center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 }
 
 @media (max-width: 849px) {
-  .hero {
-    .hero-card {
-      flex: 1 1 45%;
-      max-width: 40%;
-    }
-  }
+	.hero {
+		.hero-card {
+			// flex: 1 1 45%;
+			// max-width: 40%;
+		}
+	}
 }
 
 @media (max-width: 670px) {
-  .bg-wrapper {
-    background: url("../assets/herobg-mobile.jpeg") no-repeat top center;
-    background-size: fill;
-    width: 100%;
-    background-repeat: no-repeat;
-  }
+	.bg-wrapper {
+		background: url("../assets/herobg-mobile.jpeg") no-repeat top center;
+		background-size: fill;
+		width: 100%;
+		background-repeat: no-repeat;
+	}
 }
 
 @media (max-width: 425px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
+	.hero {
+		// flex-direction: column;
+		align-items: center;
+	}
 }
