@@ -6,19 +6,24 @@ import TvShows from "./sections/TvShows";
 import Highlights from "./sections/Highlights";
 import Plans from "./sections/Plans";
 import Footer from "./sections/Footer";
+
+import LandingRoute from "./views/landing";
+
 const App = () => {
-  return (
-    <>
-      <div className="bg-wrapper">
-        <Header />
-        <Hero />
-        <TvShows />
-        <Highlights />
-        <Plans />
-        <Footer />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className="bg-wrapper">
+				<Header />
+				<Hero />
+				<TvShows />
+				<Highlights />
+				<Plans />
+				<Footer />
+			</div>
+
+			{/* <LandingRoute /> */}
+		</>
+	);
 };
 
 export default App;

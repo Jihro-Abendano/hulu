@@ -8,6 +8,11 @@
 	align-items: center;
 	text-align: center;
 
+	// should be
+	// &-list {
+	// 	styles here...
+	// }
+
 	.tv-card-list {
 		display: flex;
 		justify-content: center;
