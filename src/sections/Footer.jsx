@@ -43,25 +43,89 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-box small-box">
-            <h3>Help</h3>
-            <ul>
-              <li>Account & Billing</li>
-              <li>Plans & Pricing</li>
-              <li>Supported Devices</li>
-              <li>Accessibility</li>
-            </ul>
+          <div className="footer-box small-box-container">
+            <div className="footer-box small-box">
+              <h3>Help</h3>
+              <ul>
+                <li>Account & Billing</li>
+                <li>Plans & Pricing</li>
+                <li>Supported Devices</li>
+                <li>Accessibility</li>
+              </ul>
+            </div>
+
+            <div className="footer-box small-box">
+              <h3>About Us</h3>
+              <ul>
+                <li>Shop Hulu</li>
+                <li>Press</li>
+                <li>Jobs</li>
+                <li>Contact</li>
+                <li>Guides | What to Watch</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-dropdown">
+          <div className="footer-box browse-box">
+            <details>
+              <summary>Browse</summary>
+              <div className="browse-columns">
+                <ul>
+                  <li>Streaming Library</li>
+                  <li>Live TV</li>
+                  <li>Live News</li>
+                  <li>Live Sports</li>
+                </ul>
+                <ul>
+                  <li>TV Shows</li>
+                  <li>Movies</li>
+                  <li>Originals</li>
+                  <li>Networks</li>
+                  <li>Kids</li>
+                  <li>FX</li>
+                </ul>
+                <ul>
+                  <li>Max</li>
+                  <li>Cinemax</li>
+                  <li>Paramount+ with SHOWTIME</li>
+                  <li>STARZ</li>
+                </ul>
+                <ul>
+                  <li>Disney+, Hulu, ESPN+ Bundle Basic</li>
+                  <li>Disney+, Hulu, ESPN+ Bundle Premium</li>
+                  <li>Disney+, Hulu Bundle</li>
+                  <li>Disney+, Hulu, Max Bundle</li>
+                  <li>Student Discount</li>
+                </ul>
+              </div>
+            </details>
           </div>
 
           <div className="footer-box small-box">
-            <h3>About Us</h3>
-            <ul>
-              <li>Shop Hulu</li>
-              <li>Press</li>
-              <li>Jobs</li>
-              <li>Contact</li>
-              <li>Guides | What to Watch</li>
-            </ul>
+            <details>
+              <summary>Help</summary>
+              <ul>
+                <li>Account & Billing</li>
+                <li>Plans & Pricing</li>
+                <li>Supported Devices</li>
+                <li>Accessibility</li>
+              </ul>
+            </details>
+          </div>
+
+          <div className="footer-box small-box">
+            <details>
+              <summary>About Us</summary>
+              <ul>
+                <li>Shop Hulu</li>
+                <li>Press</li>
+                <li>Jobs</li>
+                <li>Contact</li>
+                <li>Guides | What to Watch</li>
+              </ul>
+            </details>
           </div>
         </div>
 

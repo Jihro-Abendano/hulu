@@ -3,7 +3,7 @@
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 400px;
+  width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,9 @@
   }
 
   .terms {
-    color: gray;
+    color: white;
+    font-size: 0.7rem;
+    text-decoration: underline;
   }
 
   &.horizontal {
@@ -41,6 +43,10 @@
     max-width: 1200px;
     padding: 0.5rem 1rem;
     gap: 1rem;
+
+    .terms {
+      color: gray;
+    }
 
     .hero-card-image {
       width: 150px;
@@ -69,18 +75,46 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &.horizontal {
       flex-direction: column;
+      align-items: center;
       text-align: center;
 
       .hero-card-image {
+        width: 180px;
         margin-bottom: 1rem;
+      }
+
+      .text-group {
+        margin-left: 0;
+        align-items: center;
+
+        h2,
+        p {
+          text-align: center;
+        }
       }
 
       .button-group {
         margin-top: 1rem;
       }
     }
+  }
+
+  @media (max-width: 575px) {
+    .hero-card-image {
+      width: 140px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-card {
+    padding-bottom: 2rem;
   }
 }
