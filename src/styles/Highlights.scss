@@ -118,9 +118,20 @@
   .highlights {
     align-items: flex-start;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 1rem;
+
+    background-image: url("../assets/sports-mobile.png"); // Add this if image is different for mobile
+    background-position: center bottom; // Pin the bottom
+    background-size: 100%; // Zoom into image
+    background-repeat: no-repeat;
+    padding-bottom: 20rem;
   }
 
+  .highlight-content {
+    p {
+      font-size: 0.9rem;
+    }
+  }
   .highlight-tab-container {
     padding-right: 0;
     width: 100%;
@@ -141,13 +152,43 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-  .highlight-content {
-    padding-top: 10rem;
-  }
 
   .highlight-content h2 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .highlight-options {
+    width: 400px;
+  }
+
+  .highlight-content {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .highlights {
+    padding-top: 0rem;
+  }
+  .logo-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlight-options {
+    align-items: left;
   }
 }

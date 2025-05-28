@@ -1,5 +1,5 @@
 //Highlights.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HighlightOption from "../components/HighlightOption";
 import { highlightData } from "../data/highlightData";
 import "../styles/Highlights.scss";
@@ -7,14 +7,22 @@ import useHighlightAnimation from "../hooks/useHighlightAnimation";
 
 const Highlights = () => {
   const [activeKey, setActiveKey] = useState("sports");
-  const { title, description, background, logos } = highlightData[activeKey];
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  const { title, description, background, backgroundMobile, logos } =
+    highlightData[activeKey];
   const animateContent = useHighlightAnimation(activeKey);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const bg = isMobile ? backgroundMobile : background;
+
   return (
-    <section
-      className="highlights"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <section className="highlights" style={{ backgroundImage: `url(${bg})` }}>
       <div className="highlight-tab-container">
         <div className="highlight-options">
           {Object.entries(highlightData).map(([key, option]) => (

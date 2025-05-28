@@ -57,7 +57,7 @@ footer {
     .browse-columns {
       display: flex;
       gap: 5rem;
-      // overflow-x: auto;
+
       padding-bottom: 1rem;
     }
   }
@@ -70,6 +70,7 @@ footer {
     margin-top: 1rem;
     margin-bottom: 1rem;
     gap: 1rem;
+    padding-bottom: 1rem;
 
     a {
       margin: 0 0.5rem;
@@ -85,8 +86,9 @@ footer {
   .footer-policies {
     font-size: 0.75rem;
     color: #777;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    //margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
 
     ul {
       list-style: none;
