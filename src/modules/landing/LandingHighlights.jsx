@@ -1,9 +1,12 @@
 //Highlights.jsx
 import React, { useState, useEffect } from "react";
-import HighlightOption from "../components/HighlightOption";
-import { highlightData } from "../data/highlightData";
-import "../styles/Highlights.scss";
-import useHighlightAnimation from "../hooks/useHighlightAnimation";
+
+import HighlightOption from "../../components/highlightoption/HighlightOption";
+import { highlightData } from "../../data/highlightData";
+
+import styles from "./LandingHighlights.module.scss";
+
+import useHighlightAnimation from "../../hooks/useHighlightAnimation";
 
 const Highlights = () => {
   const [activeKey, setActiveKey] = useState("sports");
@@ -22,9 +25,12 @@ const Highlights = () => {
   const bg = isMobile ? backgroundMobile : background;
 
   return (
-    <section className="highlights" style={{ backgroundImage: `url(${bg})` }}>
-      <div className="highlight-tab-container">
-        <div className="highlight-options">
+    <section
+      className={styles["highlights"]}
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      <div className={styles["highlight-tab-container"]}>
+        <div className={styles["highlight-options"]}>
           {Object.entries(highlightData).map(([key, option]) => (
             <HighlightOption
               key={key}
@@ -36,18 +42,20 @@ const Highlights = () => {
         </div>
 
         <div
-          className={`highlight-content ${animateContent ? "fade-in-up" : ""}`}
+          className={`${styles["highlight-content"]} ${
+            animateContent ? styles["fade-in-up"] : ""
+          }`}
         >
           <h2>{title}</h2>
           <p>{description}</p>
-          <div className="logo-circles">
+          <div className={styles["logo-circles"]}>
             {logos.map((logo, index) => (
-              <div className="logo-circle" key={index}>
+              <div className={styles["logo-circle"]} key={index}>
                 <img src={logo} alt={`logo-${index}`} />
               </div>
             ))}
           </div>
-          <p className="disclaimer">
+          <p className={styles["disclaimer"]}>
             Live TV plan required. Regional restrictions, blackouts and
             additional terms apply. See details
           </p>

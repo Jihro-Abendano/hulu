@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/Header.scss";
-import logo from "../assets/logo.png";
+import "./Header.scss";
+import logo from "../../assets/logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,15 +1,20 @@
 import React from "react";
-import "../styles/Hero.scss";
-import HeroCard from "../components/HeroCard";
-import Buttons from "../components/Buttons";
-import dh from "../assets/dh.png";
-import dhe from "../assets/dhe.png";
-import dhm from "../assets/dhm.png";
+
+import styles from "./LandingHero.module.scss";
+
+import HeroCard from "../../components/herocard/HeroCard";
+import Header from "../../components/header/Header";
+
+import Buttons from "../../components/buttons/Buttons";
+import dh from "../../assets/dh.png";
+import dhe from "../../assets/dhe.png";
+import dhm from "../../assets/dhm.png";
 
 const Hero = () => {
   return (
     <>
-      <section className="hero">
+      <Header />
+      <section className={styles["hero"]}>
         <HeroCard
           title="DISNEY+, HULU BUNDLE BASIC"
           imageSrc={dh}
@@ -25,7 +30,7 @@ const Hero = () => {
         />
       </section>
 
-      <section className="mid-hero">
+      <section className={styles["mid-hero"]}>
         <HeroCard
           title="DISNEY+, HULU, ESPN+, BUNDLE BASIC"
           imageSrc={dhe}
@@ -35,7 +40,7 @@ const Hero = () => {
         />
       </section>
 
-      <section className="bot-hero">
+      <section className={styles["bot-hero"]}>
         <p>BUILD THE PLAN THAT'S RIGHT FOR YOU</p>
         <Buttons text="START BUILDING" variant="bot" />
       </section>
