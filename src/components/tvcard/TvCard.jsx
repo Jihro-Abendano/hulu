@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TvCard.scss";
+import "./TvCard.scss";
 
 const TvCard = ({ imageSrc, title, description }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/HeroCard.scss";
-import Buttons from "./Buttons";
+import "./HeroCard.scss";
+import Buttons from "../buttons/Buttons";
 
 const HeroCard = ({
   title,

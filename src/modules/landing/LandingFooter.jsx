@@ -1,18 +1,18 @@
 import React from "react";
-import "../styles/Footer.scss";
-import fb from "../assets/footer/facebook.svg";
-import ig from "../assets/footer/instagram.svg";
-import x from "../assets/footer/x_logo.svg";
-import yt from "../assets/footer/youtube.svg";
+import styles from "./LandingFooter.module.scss";
+import fb from "../../assets/footer/facebook.svg";
+import ig from "../../assets/footer/instagram.svg";
+import x from "../../assets/footer/x_logo.svg";
+import yt from "../../assets/footer/youtube.svg";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-container">
-        <div className="footer-row">
-          <div className="footer-box browse-box">
+      <div className={styles["footer-container"]}>
+        <div className={styles["footer-row"]}>
+          <div className={`${styles["footer-box"]} ${styles["browse-box"]}`}>
             <h3>Browse</h3>
-            <div className="browse-columns">
+            <div className={styles["browse-columns"]}>
               <ul>
                 <li>Streaming Library</li>
                 <li>Live TV</li>
@@ -43,8 +43,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-box small-box-container">
-            <div className="footer-box small-box">
+          <div
+            className={`${styles["footer-box"]} ${styles["small-box-container"]}`}
+          >
+            <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
               <h3>Help</h3>
               <ul>
                 <li>Account & Billing</li>
@@ -54,7 +56,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="footer-box small-box">
+            <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
               <h3>About Us</h3>
               <ul>
                 <li>Shop Hulu</li>
@@ -67,11 +69,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-dropdown">
-          <div className="footer-box browse-box">
+        <div className={styles["footer-dropdown"]}>
+          <div className={`${styles["footer-box"]} ${styles["browse-box"]}`}>
             <details>
               <summary>Browse</summary>
-              <div className="browse-columns">
+              <div className={styles["browse-columns"]}>
                 <ul>
                   <li>Streaming Library</li>
                   <li>Live TV</li>
@@ -103,7 +105,7 @@ const Footer = () => {
             </details>
           </div>
 
-          <div className="footer-box small-box">
+          <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
             <details>
               <summary>Help</summary>
               <ul>
@@ -115,7 +117,7 @@ const Footer = () => {
             </details>
           </div>
 
-          <div className="footer-box small-box">
+          <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
             <details>
               <summary>About Us</summary>
               <ul>
@@ -129,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-socials">
+        <div className={styles["footer-socials"]}>
           <a
             href="https://www.facebook.com"
             target="_blank"
@@ -159,7 +161,7 @@ const Footer = () => {
             <img src={yt} alt="YouTube" />
           </a>
         </div>
-        <div className="footer-policies">
+        <div className={styles["footer-policies"]}>
           <ul>
             <li>© 2025 Hulu, LLC</li>
             <li>About Ads</li>

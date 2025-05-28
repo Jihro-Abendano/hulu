@@ -4,7 +4,8 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-  position: relative;
+  position: absolute;
+  width: 94%;
   z-index: 10;
 
   img {
@@ -48,6 +49,12 @@ nav {
   }
 }
 
+@media (max-width: 1060px) {
+  nav {
+    width: 92%;
+  }
+}
+
 /* Mobile styles */
 @media (max-width: 1024px) {
   nav {
@@ -85,5 +92,11 @@ nav {
         }
       }
     }
+  }
+}
+
+@media (max-width: 425px) {
+  nav {
+    width: 83%;
   }
 }

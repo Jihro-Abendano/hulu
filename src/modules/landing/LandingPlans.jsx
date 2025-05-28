@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { plansData } from "../data/plansData";
-import "../styles/Plans.scss";
+import { plansData } from "../../data/plansData";
+import styles from "./LandingPlans.module.scss";
 
 const Plans = () => {
   const [selectedPlan, setSelectedPlan] = useState("dh");
@@ -17,15 +17,15 @@ const Plans = () => {
   };
 
   return (
-    <section className="plans">
-      <header className="top-text">
+    <section className={styles["plans"]}>
+      <header className={styles["top-text"]}>
         <h1>Select Your Plan</h1>
         <p>No hidden fees, equipment rentals, or installation appointments.</p>
         <p>
           <strong>Switch plans or cancel anytime.**</strong>
         </p>
 
-        <div className="plan-dropdown">
+        <div className={styles["plan-dropdown"]}>
           <select id="plan-select" onChange={handleChange} value={selectedPlan}>
             <option value="dh">Disney+, Hulu Bundle</option>
             <option value="dhe">Disney+, Hulu, ESPN+ Bundle</option>
@@ -36,7 +36,7 @@ const Plans = () => {
       </header>
 
       {currentPlan && (
-        <div className="plans-table">
+        <div className={styles["plans-table"]}>
           <table>
             <thead>
               <tr>
@@ -60,23 +60,26 @@ const Plans = () => {
             </tbody>
           </table>
 
-          <div className="disclaimer">
+          <div className={styles["disclaimer"]}>
             {currentPlan.disclaimer.split("\n").map((line, index) => (
               <p key={index}>{line}</p>
             ))}
           </div>
 
           {currentPlan.addons && (
-            <div className="addons-section">
-              <div className="addons-wrapper">
-                <button className="toggle-button" onClick={toggleAddons}>
+            <div className={styles["addons-section"]}>
+              <div className={styles["addons-wrapper"]}>
+                <button
+                  className={styles["toggle-button"]}
+                  onClick={toggleAddons}
+                >
                   {showAddons ? "Hide Add-ons" : "Show Add-ons"}
                 </button>
 
                 {showAddons && (
                   <>
                     <h2>Available Add-ons</h2>
-                    <table className="addons-table">
+                    <table className={styles["addons-table"]}>
                       <tbody>
                         <tr>
                           <td colSpan="3">
