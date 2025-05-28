@@ -1,6 +1,7 @@
 //highlightData.js
 
 import sports from "../assets/sports.jpeg";
+import sportsM from "../assets/sports-mobile.png";
 import news from "../assets/news.jpeg";
 import events from "../assets/events.jpeg";
 import cbs from "../assets/logos/cbs.png";
@@ -25,6 +26,7 @@ export const highlightData = {
     description:
       "Catch your games at home or on the go. Stream live games from major college and pro leagues including the NCAA®, NBA, NHL, NFL, and more.",
     background: sports,
+    backgroundMobile: sportsM,
     logos: [cbs, espn, fs1, nfl, mlb],
   },
 

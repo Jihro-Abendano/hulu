@@ -46,6 +46,13 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .mid-hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 @media (max-width: 849px) {
   .hero {
     .hero-card {

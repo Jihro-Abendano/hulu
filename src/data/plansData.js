@@ -4,6 +4,7 @@ import dheImage from "../assets/dhe.png";
 import dhmImage from "../assets/dhm.png";
 import hltvImage from "../assets/hltv.png";
 
+import check from "../assets/check.svg";
 export const plansData = {
   dh: {
     titles: [
