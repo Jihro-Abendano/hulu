@@ -1,29 +1,21 @@
 import React from "react";
 import "./styles/App.scss";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import TvShows from "./sections/TvShows";
-import Highlights from "./sections/Highlights";
-import Plans from "./sections/Plans";
-import Footer from "./sections/Footer";
 
 import LandingRoute from "./views/landing";
 
-const App = () => {
-	return (
-		<>
-			<div className="bg-wrapper">
-				<Header />
-				<Hero />
-				<TvShows />
-				<Highlights />
-				<Plans />
-				<Footer />
-			</div>
+function Routes() {}
+function Route({ children }) {
+  return <>{children}</>;
+}
 
-			{/* <LandingRoute /> */}
-		</>
-	);
+const App = () => {
+  return (
+    <Routes>
+      <Route to="/">
+        <LandingRoute />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
