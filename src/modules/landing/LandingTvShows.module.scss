@@ -23,6 +23,11 @@
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: -1rem;
+    padding-top: 7rem;
+
+    @media (max-width: 1280px) {
+      padding-top: 2rem;
+    }
   }
 
   h2 {
@@ -39,6 +44,7 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #ccc;
+    padding-bottom: 2rem;
   }
 
   .disclaimer {
@@ -61,7 +67,8 @@
   }
 
   .description {
-    width: 50%;
+    width: 100%;
+    margin: 0;
     //spacing of newline
   }
 }

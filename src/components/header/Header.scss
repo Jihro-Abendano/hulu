@@ -95,6 +95,12 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    width: 91.7%;
+  }
+}
+
 @media (max-width: 425px) {
   nav {
     width: 83%;

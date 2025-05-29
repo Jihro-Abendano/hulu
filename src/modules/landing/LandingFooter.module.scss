@@ -6,6 +6,7 @@ footer {
     width: 90%;
     margin: 0 auto;
     padding-top: 2rem;
+    display: grid;
     justify-items: center;
   }
 
@@ -23,6 +24,7 @@ footer {
 
   .small-box-container {
     display: flex;
+    gap: 2rem;
   }
 
   .footer-box {
@@ -56,7 +58,7 @@ footer {
 
     .browse-columns {
       display: flex;
-      gap: 5rem;
+      gap: 2rem;
 
       padding-bottom: 1rem;
     }
@@ -65,12 +67,12 @@ footer {
     display: none;
   }
   .footer-socials {
+    justify-self: start;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    gap: 1rem;
-    padding-bottom: 1rem;
+    padding-left: 10%;
 
     a {
       margin: 0 0.5rem;
@@ -87,8 +89,14 @@ footer {
     font-size: 0.75rem;
     color: #777;
     //margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    padding: 2rem;
+    justify-self: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 10%;
 
     ul {
       list-style: none;
@@ -133,6 +141,13 @@ footer {
   }
 
   @media (max-width: 768px) {
+    .browse-columns {
+      flex-direction: column;
+      display: flex;
+      gap: 1.2rem !important;
+      padding-left: 1rem;
+    }
+
     .footer-container {
       justify-items: start;
     }
@@ -143,6 +158,14 @@ footer {
     .footer-dropdown {
       display: block;
       width: 100%;
+    }
+
+    .footer-socials {
+      padding: 1rem;
+    }
+
+    .footer-policies {
+      padding: 1rem;
     }
 
     summary {

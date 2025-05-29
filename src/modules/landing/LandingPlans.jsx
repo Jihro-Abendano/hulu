@@ -43,7 +43,12 @@ const Plans = () => {
                 <th></th>
                 {currentPlan.columns.map((col, i) => (
                   <th key={i}>
-                    <img src={col.image} alt={col.label} />
+                    <div className={styles["plan-header"]}>
+                      <img src={col.image} alt={col.label} />
+                      <p className={styles["label"]}>{col.label}</p>
+                      <button className={styles["price"]}>{col.price}</button>
+                      <span className={styles["deal"]}>{col.deal}</span>
+                    </div>
                   </th>
                 ))}
               </tr>

@@ -1,4 +1,3 @@
-// data/plansData.js
 import dhImage from "../assets/dh.png";
 import dheImage from "../assets/dhe.png";
 import dhmImage from "../assets/dhm.png";
@@ -22,7 +21,9 @@ export const plansData = {
     ],
     columns: [
       {
-        label: "Basic Plan",
+        label: "Disney+, Hulu Bundle Basic",
+        price: "$10.99/MONTH",
+        deal: "SAVE 44%",
         image: dhImage,
         values: [
           "$10.99/mo*",
@@ -39,7 +40,9 @@ export const plansData = {
         ],
       },
       {
-        label: "Premium Plan",
+        label: "Disney+, Hulu Bundle Premium",
+        price: "$19.99/MONTH",
+        deal: "SAVE 42%",
         image: dhImage,
         values: [
           "$19.99/mo.",

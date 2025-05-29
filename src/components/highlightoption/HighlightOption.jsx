@@ -1,8 +1,7 @@
-//HighlightOptions.jsx
 import React from "react";
 
-const HighlightOption = ({ label, isActive, onClick }) => (
-  <button className={isActive ? "active" : ""} onClick={onClick}>
+const HighlightOption = ({ label, onClick, className }) => (
+  <button className={className} onClick={onClick}>
     {label}
   </button>
 );
