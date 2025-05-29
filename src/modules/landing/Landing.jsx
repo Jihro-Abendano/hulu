@@ -3,16 +3,20 @@ import LandingHero from "./LandingHero";
 import LandingTvShows from "./LandingTvShows";
 import LandingHighlights from "./LandingHighlights";
 import LandingPlans from "./LandingPlans";
-import LandingFooter from "./LandingFooter";
+import LandingPromotional from "./LandingPromotional";
+import LandingStartBuilding from "./LandingStartBuilding";
+import LandingWatchLive from "./LandingWatchLive";
 
 function Landing() {
   return (
     <div>
       <LandingHero />
+      <LandingPromotional />
+      <LandingStartBuilding />
       <LandingTvShows />
+      <LandingWatchLive />
       <LandingHighlights />
       <LandingPlans />
-      <LandingFooter />
     </div>
   );
 }
