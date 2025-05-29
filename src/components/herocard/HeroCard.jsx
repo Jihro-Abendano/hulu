@@ -23,7 +23,7 @@ const HeroCard = ({
 
           <div className="button-group">
             {buttonText && <Buttons text={buttonText} variant="mid" />}
-            <div className="terms">Terms apply</div>
+            <div className="terms-button">Terms apply</div>
           </div>
         </>
       ) : (

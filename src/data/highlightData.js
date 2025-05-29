@@ -3,7 +3,9 @@
 import sports from "../assets/sports.jpeg";
 import sportsM from "../assets/sports-mobile.png";
 import news from "../assets/news.jpeg";
+import newsM from "../assets/news-mobile.png";
 import events from "../assets/events.jpeg";
+import eventsM from "../assets/events-mobile.png";
 import cbs from "../assets/logos/cbs.png";
 import espn from "../assets/logos/espn.png";
 import fs1 from "../assets/logos/fs1.svg";
@@ -35,6 +37,7 @@ export const highlightData = {
     description:
       "Keep pace with what's going on locally and globally with trusted opinions from all the top news networks.",
     background: news,
+    backgroundMobile: newsM,
     logos: [abc, cnn, msnbc, fox],
   },
 
@@ -43,6 +46,7 @@ export const highlightData = {
     description:
       "Spectacular, can't-miss moments like the Olympics, Grammys®, Oscars®, Emmys®, and more.",
     background: events,
+    backgroundMobile: eventsM,
     logos: [emmy, golden, grammy, oscars],
   },
 };

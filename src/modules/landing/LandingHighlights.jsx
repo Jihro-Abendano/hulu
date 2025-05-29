@@ -1,4 +1,3 @@
-//Highlights.jsx
 import React, { useState, useEffect } from "react";
 
 import HighlightOption from "../../components/highlightoption/HighlightOption";
@@ -37,6 +36,9 @@ const Highlights = () => {
               label={option.title}
               isActive={activeKey === key}
               onClick={() => setActiveKey(key)}
+              className={`${styles["highlight-button"]} ${
+                activeKey === key ? styles["active"] : ""
+              }`}
             />
           ))}
         </div>
