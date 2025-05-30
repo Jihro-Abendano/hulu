@@ -37,7 +37,7 @@ const Plans = () => {
 
       {currentPlan && (
         <div className={styles["plans-table"]}>
-          <table>
+          <table className={styles["table-desktop"]}>
             <thead>
               <tr>
                 <th></th>
@@ -65,6 +65,41 @@ const Plans = () => {
             </tbody>
           </table>
 
+          <table className={styles["table-tablet"]}>
+            <thead>
+              {currentPlan.columns.map((col, i) => (
+                <th key={i}>
+                  <div className={styles["plan-header"]}>
+                    <img src={col.image} alt={col.label} />
+                    <p className={styles["label"]}>{col.label}</p>
+                    <button className={styles["price"]}>{col.price}</button>
+                    <span className={styles["deal"]}>{col.deal}</span>
+                  </div>
+                </th>
+              ))}
+            </thead>
+
+            <tbody>
+              {currentPlan.titles.map((title, i) => (
+                <tr key={i}>
+                  <td>
+                    <span className={styles["value-left"]}>
+                      {currentPlan.columns[0].values[i]}
+                    </span>
+                  </td>
+                  <td>
+                    <span className={styles["title"]}>{title}</span>
+                  </td>
+                  <td>
+                    <span className={styles["value-right"]}>
+                      {currentPlan.columns[1].values[i]}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
           <div className={styles["disclaimer"]}>
             {currentPlan.disclaimer.split("\n").map((line, index) => (
               <p key={index}>{line}</p>
@@ -72,39 +107,37 @@ const Plans = () => {
           </div>
 
           {currentPlan.addons && (
-            <div className={styles["addons-section"]}>
-              <div className={styles["addons-wrapper"]}>
-                <button
-                  className={styles["toggle-button"]}
-                  onClick={toggleAddons}
-                >
-                  {showAddons ? "Hide Add-ons" : "Show Add-ons"}
-                </button>
-
-                {showAddons && (
-                  <>
-                    <h2>Available Add-ons</h2>
-                    <table className={styles["addons-table"]}>
-                      <tbody>
-                        <tr>
-                          <td colSpan="3">
-                            Add-ons available at an additional cost.
-                            <br />
-                            Add them up after you sign up for Hulu.
-                          </td>
+            <div className={styles["addons-wrapper"]}>
+              {showAddons && (
+                <div clasName="addons-container">
+                  <h2>Available Add-ons</h2>
+                  <table className={styles["addons-table"]}>
+                    <tbody>
+                      <tr>
+                        <td colSpan="3">
+                          Add-ons available at an additional cost.
+                          <br />
+                          Add them up after you sign up for Hulu.
+                        </td>
+                      </tr>
+                      {currentPlan.addons.map((addon, index) => (
+                        <tr key={index}>
+                          <td>{addon.name}</td>
+                          <td>{addon.basic}</td>
+                          <td>{addon.premium}</td>
                         </tr>
-                        {currentPlan.addons.map((addon, index) => (
-                          <tr key={index}>
-                            <td>{addon.name}</td>
-                            <td>{addon.basic}</td>
-                            <td>{addon.premium}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </>
-                )}
-              </div>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              <button
+                className={styles["toggle-button"]}
+                onClick={toggleAddons}
+              >
+                {showAddons ? "Hide Add-ons" : "Show Add-ons"}
+              </button>
             </div>
           )}
         </div>

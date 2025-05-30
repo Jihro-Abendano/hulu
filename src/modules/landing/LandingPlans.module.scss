@@ -1,5 +1,5 @@
 .plans {
-  background-color: black;
+  background-color: #0b0c0f;
   color: white;
   padding: 2rem;
 
@@ -50,11 +50,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 
     img {
       max-width: 100px;
       height: auto;
+      margin-bottom: 1.5rem;
     }
 
     .label {
@@ -81,27 +82,32 @@
     }
   }
   .plans-table {
-    margin-top: 2rem;
-    overflow-x: auto;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70rem;
 
-    table {
-      width: 50%;
-      border-collapse: collapse;
-      text-align: center;
-      margin: 0 auto;
-
+    .table-tablet {
+      display: none;
+    }
+    .table-desktop {
       th,
       td {
-        padding: 1rem;
+        padding: 1.5rem;
         border: 1px solid #555;
         border-left: none;
         border-right: none;
         border-top: none;
       }
 
-      th:first-child,
       td:first-child {
         text-align: left;
+      }
+
+      td:nth-child(2),
+      td:nth-child(3) {
+        text-align: center;
       }
 
       img {
@@ -111,11 +117,10 @@
     }
 
     .disclaimer {
-      width: 50%;
       margin: 1.3rem auto 0 auto;
       font-size: 0.65rem;
       color: #ccc;
-      text-align: left;
+      width: 100%;
 
       p {
         line-height: 1;
@@ -123,57 +128,53 @@
       }
     }
 
-    .addons-section {
+    .addons-wrapper {
       margin-top: 2rem;
 
-      .addons-wrapper {
-        width: 50%;
-        margin: 0 auto;
-        text-align: left;
+      .toggle-button {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        padding: 1rem;
+        border: 1px solid #555;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+      }
 
-        @media (max-width: 1024px) {
-          width: 75%;
-        }
-        .toggle-button {
-          background-color: black;
-          color: white;
-          padding: 0.6rem 1.2rem;
-          font-size: 1rem;
-          border: none;
-          cursor: pointer;
-          display: block;
-          margin: 0 auto 1rem auto;
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
 
+        th,
+        td {
           padding: 1rem;
           border: 1px solid #555;
           border-left: none;
           border-right: none;
-
-          width: 100%;
+          border-top: none;
         }
 
-        h2 {
-          font-size: 1.2rem;
-          margin-bottom: 0.5rem;
+        td:first-child {
+          text-align: left;
+          width: 35%;
         }
 
-        table {
-          width: 100%;
-          border-collapse: collapse;
+        td:nth-child(2),
+        td:nth-child(3) {
           text-align: center;
-
-          th,
-          td {
-            padding: 1rem;
-            border: 1px solid #555;
-            border-left: none;
-            border-right: none;
-            border-top: none;
-          }
-
-          td:first-child {
-            text-align: left;
-          }
         }
       }
     }
@@ -182,14 +183,72 @@
 
 @media (max-width: 1024px) {
   .plans {
+    padding: 0;
     .plans-table {
-      td {
-        font-size: 0.62rem;
+      width: 100%;
+
+      .disclaimer {
+        width: 100%;
+      }
+
+      .addons-wrapper {
+        .toggle-button {
+          width: 100%;
+        }
+
+        table {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table-desktop {
+    display: none;
+  }
+
+  .plans {
+    .plans-table {
+      width: 100%;
+
+      .table-tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        th {
+          width: 100%;
+        }
+        td {
+          border: 1px solid #555;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          padding: 2rem;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .title {
+          display: block;
+          transform: translateY(-25px);
+          padding-left: 1rem;
+          width: 25rem;
+        }
+
+        .value-left {
+          display: block;
+          transform: translateX(100px);
+        }
+        .value-right {
+          display: block;
+          transform: translateX(-100px);
+        }
       }
 
       .disclaimer {
-        width: 70%;
-        font-size: 0.5rem;
+        text-align: center;
       }
     }
   }
