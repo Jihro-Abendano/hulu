@@ -65,7 +65,7 @@ const Footer = () => {
                 {browseLinks1.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -74,7 +74,7 @@ const Footer = () => {
                 {browseLinks2.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -83,7 +83,7 @@ const Footer = () => {
                 {browseLinks3.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -92,7 +92,7 @@ const Footer = () => {
                 {browseLinks4.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -109,7 +109,7 @@ const Footer = () => {
                 {helpLinks.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -122,7 +122,7 @@ const Footer = () => {
                 {aboutLinks.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -141,7 +141,7 @@ const Footer = () => {
                   {browseLinks1.map((i) => {
                     return (
                       <li>
-                        <a href="#">{i}</a>
+                        <a href="/">{i}</a>
                       </li>
                     );
                   })}
@@ -150,7 +150,7 @@ const Footer = () => {
                   {browseLinks2.map((i) => {
                     return (
                       <li>
-                        <a href="#">{i}</a>
+                        <a href="/">{i}</a>
                       </li>
                     );
                   })}
@@ -159,7 +159,7 @@ const Footer = () => {
                   {browseLinks3.map((i) => {
                     return (
                       <li>
-                        <a href="#">{i}</a>
+                        <a href="/">{i}</a>
                       </li>
                     );
                   })}
@@ -169,7 +169,7 @@ const Footer = () => {
                   {browseLinks4.map((i) => {
                     return (
                       <li>
-                        <a href="#">{i}</a>
+                        <a href="/">{i}</a>
                       </li>
                     );
                   })}
@@ -185,7 +185,7 @@ const Footer = () => {
                 {helpLinks.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -200,7 +200,7 @@ const Footer = () => {
                 {aboutLinks.map((i) => {
                   return (
                     <li>
-                      <a href="#">{i}</a>
+                      <a href="/">{i}</a>
                     </li>
                   );
                 })}
@@ -244,7 +244,7 @@ const Footer = () => {
             {policyLinks.map((i) => {
               return (
                 <li>
-                  <a href="#">{i}</a>
+                  <a href="/">{i}</a>
                 </li>
               );
             })}

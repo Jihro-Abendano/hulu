@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { plansData } from "../../data/plansData";
+import arrow from "../../assets/arrow.svg";
 import styles from "./LandingPlans.module.scss";
 
 const Plans = () => {
@@ -155,7 +156,25 @@ const Plans = () => {
                 className={styles["toggle-button"]}
                 onClick={toggleAddons}
               >
-                {showAddons ? "Hide Add-ons" : "Show Add-ons"}
+                {showAddons ? (
+                  <>
+                    Hide-Addons{" "}
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className={styles["arrow-hide"]}
+                    />
+                  </>
+                ) : (
+                  <>
+                    Show-Adons{" "}
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className={styles["arrow-show"]}
+                    />
+                  </>
+                )}
               </button>
             </div>
           )}

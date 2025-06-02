@@ -5,10 +5,11 @@
   overflow: hidden;
   border-radius: 1rem;
   cursor: pointer;
+  border: 5px solid transparent;
 
   &:hover {
-    background: #e1e1e1;
-    border: 3px solid gray;
+    color: #7a7e85;
+    border: 5px solid;
   }
 
   .tv-card-image {
@@ -33,9 +34,11 @@
     .tv-card-description {
       font-size: 1rem;
       padding: 0;
+      color: white;
     }
 
     .tv-card-title {
+      color: white;
       font-size: 1.5rem;
       font-weight: bold;
       padding: 0;

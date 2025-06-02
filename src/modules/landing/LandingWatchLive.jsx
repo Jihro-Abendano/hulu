@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./LandingWatchLive.module.scss";
-import Buttons from "../../components/buttons/Buttons";
+import Button from "../../components/button/Button";
 
 const LandingWatchLive = () => {
   return (
@@ -18,7 +18,7 @@ const LandingWatchLive = () => {
         access to endless entertainment with Disney+ and live sports with ESPN+.
       </p>
 
-      <Buttons text="START YOUR FREE TRIAL" variant="tv-shows" />
+      <Button text="START YOUR FREE TRIAL" variant="tv-shows" />
       <p className={styles["disclaimer"]}>
         Hulu (With Ads) + Live TV plan $82.99/mo. after 3-day free trial (if
         any) unless canceled. Cancel anytime. Regional restrictions, blackouts

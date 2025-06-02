@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroCard.scss";
-import Buttons from "../buttons/Buttons";
+import Button from "../button/Button";
 
 const HeroCard = ({
   title,
@@ -18,13 +18,13 @@ const HeroCard = ({
           <div className="text-group">
             <h2>{title}</h2>
             <p>{description}</p>
-            <a href="" className="terms">
+            <a href="/" className="terms">
               What's included?
             </a>
           </div>
 
           <div className="button-group">
-            {buttonText && <Buttons text={buttonText} variant="mid" />}
+            {buttonText && <Button text={buttonText} variant="mid" />}
             <div className="terms-button">Terms apply</div>
           </div>
         </>
@@ -33,7 +33,7 @@ const HeroCard = ({
           <h2>{title}</h2>
           <img src={imageSrc} alt={title} className="hero-card-image" />
           <p>{description}</p>
-          {buttonText && <Buttons text={buttonText} variant="hero" />}
+          {buttonText && <Button text={buttonText} variant="hero" />}
           <a href="/" className="terms">
             Terms apply
           </a>

@@ -59,7 +59,10 @@ const Highlights = () => {
           </div>
           <p className={styles["disclaimer"]}>
             Live TV plan required. Regional restrictions, blackouts and
-            additional terms apply. See details
+            additional terms apply.{" "}
+            <a href="/" className={styles["disclaimer"]}>
+              See details
+            </a>
           </p>
         </div>
       </div>
