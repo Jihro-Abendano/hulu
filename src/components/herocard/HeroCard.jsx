@@ -18,7 +18,9 @@ const HeroCard = ({
           <div className="text-group">
             <h2>{title}</h2>
             <p>{description}</p>
-            <div className="terms">What's included?</div>
+            <a href="" className="terms">
+              What's included?
+            </a>
           </div>
 
           <div className="button-group">
@@ -32,7 +34,9 @@ const HeroCard = ({
           <img src={imageSrc} alt={title} className="hero-card-image" />
           <p>{description}</p>
           {buttonText && <Buttons text={buttonText} variant="hero" />}
-          <div className="terms">Terms apply</div>
+          <a href="/" className="terms">
+            Terms apply
+          </a>
         </>
       )}
     </div>
