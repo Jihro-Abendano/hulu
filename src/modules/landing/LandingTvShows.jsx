@@ -9,6 +9,14 @@ import apes from "../../assets/apes.jpeg";
 import shogun from "../../assets/shogun.jpeg";
 import hod from "../../assets/hod.jpeg";
 
+const tvShows = ["Past & Current Seasons", "TV Shows", family];
+
+const movies = ["New & Classic", "Movies", apes];
+
+const huluOriginals = ["Groundbreaking", "Hulu Originals", shogun];
+
+const premiums = ["Add-on", "Premiums", hod];
+
 const TvShows = () => {
   return (
     <>
@@ -36,6 +44,9 @@ const TvShows = () => {
           />
 
           <TvCard description="Add-on" title="Premiums" imageSrc={hod} />
+        </div>
+        <div className={styles["tv-shows-cards-disclaimer"]}>
+          Premium network add-ons available for an additional cost
         </div>
       </section>
     </>

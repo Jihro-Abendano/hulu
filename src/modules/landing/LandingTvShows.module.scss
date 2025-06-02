@@ -2,7 +2,6 @@
   padding: 4rem 2rem;
   background: black;
   color: white;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +15,14 @@
     overflow-x: auto;
     text-align: left;
   }
-
+  .tv-shows-cards-disclaimer {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    color: gray;
+    text-align: end;
+    max-width: 1200px;
+    width: 100%;
+  }
   .subtitle {
     color: #00ed82;
     font-weight: bold;
@@ -58,6 +64,26 @@
   .channel {
     text-decoration: underline;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 1323px) {
+  .tv-shows {
+    .tv-shows-cards-disclaimer {
+      color: gray;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .tv-shows {
+    .tv-shows-cards-disclaimer {
+      color: gray;
+      text-align: end;
+      max-width: 1000px;
+      width: 80%;
+    }
   }
 }
 
