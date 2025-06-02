@@ -6,6 +6,11 @@
   border-radius: 1rem;
   cursor: pointer;
 
+  &:hover {
+    background: #e1e1e1;
+    border: 3px solid gray;
+  }
+
   .tv-card-image {
     width: 100%;
     height: 100%;
