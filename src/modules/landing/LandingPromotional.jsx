@@ -27,6 +27,30 @@ const LandingPromotional = () => {
           </a>
         </div>
       </div>
+
+      <div className={styles["promotional-container-mobile"]}>
+        <h2 className={styles["promotional-mobile-title"]}>
+          DISNEY+, HULU, ESPN+, BUNDLE BASIC
+        </h2>
+        <img
+          src={dhe}
+          alt="logos"
+          className={styles["promotional-mobile-image"]}
+        />
+        <p className={styles["promotional-mobile-description"]}>
+          Get Hulu, Disney+, and ESPN+, all with ads, for $16.99/mo.{" "}
+          <a href="/" className={styles["promotional-mobile-included"]}>
+            What's included?
+          </a>
+        </p>
+
+        <button className={styles["promotional-mobile-button"]}>
+          GET ALL THREE
+        </button>
+        <a href="/" className={styles["promotional-mobile-terms"]}>
+          Terms apply
+        </a>
+      </div>
     </section>
   );
 };
