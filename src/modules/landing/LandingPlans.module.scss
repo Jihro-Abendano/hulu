@@ -3,122 +3,32 @@
   color: white;
   padding: 2rem;
 
-  .top-text {
+  &-top-text {
     text-align: center;
     margin-bottom: 2rem;
 
-    h1 {
+    &-title {
       font-size: 2.9rem;
       margin-bottom: 1rem;
     }
 
-    p {
+    &-subtitle {
       font-size: 1rem;
       margin: 0.6rem 0;
     }
-  }
 
-  .plan-dropdown {
-    margin-top: 1rem;
-    text-align: center;
-    border-radius: 36px;
-    overflow: hidden;
-    display: inline-block;
-
-    label {
-      margin-right: 0.5rem;
-    }
-
-    select {
-      padding: 0rem 1rem 0rem 1.5rem; // top right left bot
+    &-switch {
       font-size: 1rem;
-      border-radius: 36px;
-      border: none;
-      height: 2.5rem;
-      line-height: 2.5rem;
-      appearance: none;
-      background: white
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23000' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
-        no-repeat right 2rem center;
-      background-size: 1rem;
-      color: black;
-      cursor: pointer;
+      font-weight: bold;
+      margin: 0.6rem 0;
     }
   }
-
-  .plan-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-    img {
-      max-width: 100px;
-      height: auto;
-      margin-bottom: 1.5rem;
-    }
-
-    .label {
-      font-weight: bold;
-      margin: 0;
-    }
-
-    .price {
-      width: 17rem;
-      height: 2.7rem;
-      padding: 0.4rem 1rem;
-      border: none;
-      border-radius: 3px;
-      background-color: white;
-      color: black;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-
-    .deal {
-      font-size: 0.6rem;
-      color: white;
-    }
-  }
-  .plans-table {
+  &-table {
     margin: 2rem auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 70rem;
-
-    .addons-tablet {
-      display: none;
-    }
-
-    .table-tablet {
-      display: none;
-    }
-    .table-desktop {
-      th,
-      td {
-        padding: 1.5rem;
-        border: 1px solid #555;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-      }
-
-      td:first-child {
-        text-align: left;
-      }
-
-      td:nth-child(2),
-      td:nth-child(3) {
-        text-align: center;
-      }
-
-      img {
-        max-width: 100px;
-        height: auto;
-      }
-    }
 
     .disclaimer {
       margin: 1.3rem auto 0 auto;
@@ -132,7 +42,7 @@
       }
     }
 
-    .addons-wrapper {
+    .addons {
       margin-top: 2rem;
 
       .toggle-button {
@@ -156,37 +66,10 @@
       .arrow-hide {
         transform: rotate(180deg);
       }
-      h2 {
+      &-container-available {
         font-size: 2rem;
         margin-bottom: 0.5rem;
         padding-left: 1rem;
-      }
-
-      .addons-desktop {
-        border-collapse: collapse;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-        th,
-        td {
-          padding: 1rem;
-          border: 1px solid #555;
-          border-left: none;
-          border-right: none;
-          border-top: none;
-        }
-
-        td:first-child {
-          text-align: left;
-          width: 35%;
-        }
-
-        td:nth-child(2),
-        td:nth-child(3) {
-          text-align: center;
-        }
       }
     }
   }
@@ -194,66 +77,22 @@
 
 @media (max-width: 1180px) {
   .plans {
-    .plans-table {
+    &-table {
       width: 60rem;
     }
   }
 }
 
 @media (max-width: 1023px) {
-  .table-desktop {
-    display: none;
-  }
-
   .addons-desktop {
     display: none;
   }
 
   .plans {
-    .plans-table {
+    &-table {
       width: 100%;
 
-      .table-tablet {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        th {
-          width: 100%;
-          padding-left: 3.5rem;
-          padding-right: 3.5rem;
-        }
-        .price {
-          width: 19rem;
-          overflow: hidden;
-        }
-        td {
-          border: 1px solid #555;
-          border-left: none;
-          border-right: none;
-          border-top: none;
-          padding: 2rem;
-          font-size: 0.9rem;
-          text-align: center;
-        }
-        .title {
-          display: block;
-          transform: translateY(-25px);
-          padding-left: 4rem;
-          width: 25rem;
-        }
-
-        .value-left {
-          display: block;
-          transform: translateX(100px);
-        }
-        .value-right {
-          display: block;
-          transform: translateX(-100px);
-        }
-      }
-
-      .addons-wrapper {
+      .addons {
         h2 {
           text-align: center;
           padding-left: 0;
@@ -269,16 +108,6 @@
           border-right: none;
           border-top: none;
         }
-
-        .addons-tablet {
-          display: table;
-
-          border-collapse: collapse;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-          width: 100%;
-        }
       }
 
       .disclaimer {
@@ -286,63 +115,6 @@
       }
     }
   }
-}
-
-@media (max-width: 838px) {
-  .plans {
-    .plans-table {
-      .table-tablet {
-        th {
-          width: 100%;
-          padding-left: 2rem;
-          padding-right: 2rem;
-        }
-        td {
-          border: 1px solid #555;
-          border-left: none;
-          border-right: none;
-          border-top: none;
-          text-align: center;
-        }
-        .title {
-          display: block;
-          transform: translateY(-25px);
-          padding-left: 2rem;
-          width: 20rem;
-        }
-
-        .price {
-          width: 18rem;
-        }
-      }
-    }
-  }
-}
-
-@media (max-widht: 767px) {
-  .plans {
-    padding: 0;
-    // .plans-table {
-    //   .table-tablet {
-    //   }
-    // }
-  }
-}
-
-@media (max-width: 425px) {
-  // .plans {
-  //   .plans-table {
-  //     th,
-  //     td {
-  //       font-size: 0.65rem;
-  //     }
-
-  //     .disclaimer {
-  //       width: 100%;
-  //       font-size: 0.5rem;
-  //     }
-  //   }
-  // }
 }
 
 @media (max-width: 375px) {
@@ -358,7 +130,6 @@
     .disclaimer {
       p {
         line-height: 1;
-        margin: rem 0;
         padding-left: 1rem;
       }
     }

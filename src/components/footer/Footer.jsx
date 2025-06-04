@@ -1,4 +1,5 @@
 import React from "react";
+import Dropdown from "../../components/dropdown/Dropdown";
 import styles from "./Footer.module.scss";
 import fb from "../../assets/footer/facebook.svg";
 import ig from "../../assets/footer/instagram.svg";
@@ -57,10 +58,12 @@ const Footer = () => {
   return (
     <footer>
       <div className={styles["footer-container"]}>
-        <div className={styles["footer-row"]}>
-          <div className={`${styles["footer-box"]} ${styles["browse-box"]}`}>
-            <h3>Browse</h3>
-            <div className={styles["browse-columns"]}>
+        <div className={styles["footer-container-row"]}>
+          <div className={styles["footer-container-row-browse"]}>
+            <h3 className={styles["footer-container-row-browse-text"]}>
+              Browse
+            </h3>
+            <div className={styles["footer-container-row-browse-columns"]}>
               <ul>
                 {browseLinks1.map((i) => {
                   return (
@@ -100,11 +103,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div
-            className={`${styles["footer-box"]} ${styles["small-box-container"]}`}
-          >
-            <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
-              <h3>Help</h3>
+          <div className={styles["footer-container-row-box"]}>
+            <div className={styles["footer-container-row-box-help"]}>
+              <h3 className={styles["footer-container-row-box-help-text"]}>
+                Help
+              </h3>
               <ul>
                 {helpLinks.map((i) => {
                   return (
@@ -116,7 +119,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
+            <div className={styles["footer-container-row-box-about"]}>
               <h3>About Us</h3>
               <ul>
                 {aboutLinks.map((i) => {
@@ -131,115 +134,31 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className={styles["footer-dropdown"]}>
-          <div className={`${styles["footer-box"]} ${styles["browse-box"]}`}>
-            <details>
-              <summary>Browse</summary>
-              <div className={styles["browse-columns"]}>
-                <ul></ul>
-                <ul>
-                  {browseLinks1.map((i) => {
-                    return (
-                      <li>
-                        <a href="/">{i}</a>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <ul>
-                  {browseLinks2.map((i) => {
-                    return (
-                      <li>
-                        <a href="/">{i}</a>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <ul>
-                  {browseLinks3.map((i) => {
-                    return (
-                      <li>
-                        <a href="/">{i}</a>
-                      </li>
-                    );
-                  })}
-                </ul>
+        <Dropdown
+          className
+          browseLinks1={browseLinks1}
+          browseLinks2={browseLinks2}
+          browseLinks3={browseLinks3}
+          browseLinks4={browseLinks4}
+          helpLinks={helpLinks}
+          aboutLinks={aboutLinks}
+        />
 
-                <ul>
-                  {browseLinks4.map((i) => {
-                    return (
-                      <li>
-                        <a href="/">{i}</a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </details>
-          </div>
-
-          <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
-            <details>
-              <summary>Help</summary>
-              <ul>
-                {helpLinks.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </details>
-          </div>
-
-          <div className={`${styles["footer-box"]} ${styles["small-box"]}`}>
-            <details>
-              <summary>About Us</summary>
-              <ul>
-                {aboutLinks.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </details>
-          </div>
-        </div>
-
-        <div className={styles["footer-socials"]}>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className={styles["footer-container-socials"]}>
+          <a href="https://www.facebook.com">
             <img src={fb} alt="Facebook" />
           </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.instagram.com">
             <img src={ig} alt="Instagram" />
           </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://twitter.com">
             <img src={x} alt="X" />
           </a>
-          <a
-            href="https://www.youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.youtube.com">
             <img src={yt} alt="YouTube" />
           </a>
         </div>
-        <div className={styles["footer-policies"]}>
+        <div className={styles["footer-container-policies"]}>
           <ul>
             {policyLinks.map((i) => {
               return (
