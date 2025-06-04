@@ -1,5 +1,3 @@
-//highlightData.js
-
 import sports from "../assets/sports.jpeg";
 import sportsM from "../assets/sports-mobile.png";
 import news from "../assets/news.jpeg";

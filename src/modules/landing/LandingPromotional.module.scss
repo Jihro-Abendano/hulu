@@ -6,11 +6,11 @@
   z-index: 2;
   min-height: 130px;
 
-  .promotional-container-mobile {
+  &-mobile {
     display: none;
   }
 
-  .promotional-container {
+  &-container {
     display: flex;
     align-items: center;
     max-width: 2000px;
@@ -19,36 +19,36 @@
     gap: 12rem;
     text-align: left;
 
-    .promotional-image {
+    &-image {
       width: 200px;
       height: auto;
     }
 
-    .promotional-text-group {
-      .promotional-text-group-title {
+    &-text-group {
+      &-title {
         color: #08cc77;
         font-size: 0.8rem;
       }
 
-      .promotional-text-group-description {
+      &-description {
         color: #ffffff;
         font-size: 1.3rem;
         margin: 0;
       }
 
-      .promotional-text-group-included {
+      &-included {
         font-size: 0.7rem;
         color: #d0d7d9;
       }
     }
-    .promotional-container-buttonterms {
+    &-buttonterms {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
 
-      .promotional-button {
+      &-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,7 +62,7 @@
         cursor: pointer;
       }
 
-      .promotional-terms {
+      &-terms {
         color: #d0d7d9;
         font-size: 0.7rem;
       }
@@ -78,7 +78,7 @@
   @media (max-width: 1436px) {
     .promotional-container {
       gap: 5rem;
-      .promotional-text-group-description {
+      &-text-group-description {
         width: 90%;
       }
     }
@@ -89,12 +89,12 @@
       gap: 2rem;
       padding-left: 2rem;
 
-      .promotional-text-group {
+      &-text-group {
         width: 50%;
         margin-left: 2rem;
       }
 
-      .promotional-container-buttonterms {
+      &-buttonterms {
         margin-left: 0;
       }
     }
@@ -105,7 +105,7 @@
       gap: 1rem;
       padding-bottom: 2rem;
       padding-top: 1rem;
-      .promotional-text-group {
+      &-text-group {
         width: 40%;
         margin-left: 2rem;
       }
@@ -117,52 +117,52 @@
       display: none;
     }
 
-    .promotional-container-mobile {
+    .promotional-mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
 
-    .promotional-mobile-title {
-      margin-top: 2rem;
-      color: #00ed82;
-      font-size: 0.8rem;
-    }
-    .promotional-mobile-image {
-      width: 200px;
-      height: auto;
-    }
+      &-title {
+        margin-top: 2rem;
+        color: #00ed82;
+        font-size: 0.8rem;
+      }
+      &-image {
+        width: 200px;
+        height: auto;
+      }
 
-    .promotional-mobile-description {
-      color: #c7d0d4;
-      font-size: 0.9rem;
-      margin-top: 0;
-    }
+      &-description {
+        color: #c7d0d4;
+        font-size: 0.9rem;
+        margin-top: 0;
 
-    .promotional-mobile-included {
-      color: #b9c4c7;
-      font-size: 0.9rem;
-      height: 1rem;
-    }
+        &-included {
+          color: #b9c4c7;
+          font-size: 0.9rem;
+          height: 1rem;
+        }
+      }
 
-    .promotional-mobile-button {
-      justify-content: center;
-      align-items: center;
-      width: 10rem;
-      height: 3rem;
-      border-color: transparent;
-      background-color: #00ed82;
-      border-radius: 0.3rem;
-      font-size: 0.9rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
+      &-button {
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 3rem;
+        border-color: transparent;
+        background-color: #00ed82;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
-    .promotional-mobile-terms {
-      color: #c7d0d4;
-      font-size: 0.6rem;
-      margin-bottom: 2rem;
+      &-terms {
+        color: #c7d0d4;
+        font-size: 0.6rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

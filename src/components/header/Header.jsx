@@ -7,18 +7,18 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <header>
-      <nav>
+      <nav className="nav">
         <img src={logo} alt="Logo" />
 
         <div className="nav-actions">
-          <div className="login-button">LOG IN</div>
+          <div className="nav-actions-login">LOG IN</div>
 
-          <div className="hamburger" onClick={toggleMenu}>
+          <div className="nav-actions-hamburger" onClick={toggleMenu}>
             ☰
           </div>
 
           {menuOpen && (
-            <div className="mobile-menu">
+            <div className="nav-actions-menu">
               <ul>
                 <li>Get the Hulu App</li>
                 <li>Log In</li>

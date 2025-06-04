@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,13 +13,13 @@ nav {
     cursor: pointer;
   }
 
-  .nav-actions {
+  &-actions {
     display: flex;
     align-items: center;
     gap: 1rem;
     position: relative;
 
-    .login-button {
+    &-login {
       color: white;
       font-weight: bold;
       border-radius: 8px;
@@ -32,7 +32,7 @@ nav {
       }
     }
 
-    .hamburger {
+    &-hamburger {
       display: none;
       font-size: 1rem;
       background-color: #333;
@@ -43,30 +43,30 @@ nav {
       user-select: none;
     }
 
-    .mobile-menu {
+    &-menu {
       display: none;
     }
   }
 }
 
 @media (max-width: 1060px) {
-  nav {
+  .nav {
     width: 92%;
   }
 }
 
 @media (max-width: 1024px) {
-  nav {
-    .nav-actions {
-      .login-button {
+  .nav {
+    &-actions {
+      &-login {
         display: none;
       }
 
-      .hamburger {
+      &-hamburger {
         display: block;
       }
 
-      .mobile-menu {
+      &-menu {
         display: block;
         position: absolute;
         top: 100%;
@@ -95,13 +95,13 @@ nav {
 }
 
 @media (max-width: 768px) {
-  nav {
-    width: 91.7%;
+  .nav {
+    width: 90%;
   }
 }
 
 @media (max-width: 425px) {
-  nav {
+  .nav {
     width: 83%;
   }
 }
