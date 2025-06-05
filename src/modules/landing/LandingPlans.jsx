@@ -41,17 +41,19 @@ const Plans = () => {
           <TableDesktop currentPlan={currentPlan} />
           <TableTablet currentPlan={currentPlan} />
 
-          <div className={styles["disclaimer"]}>
+          <div className={styles["plans-table-disclaimer"]}>
             {currentPlan.disclaimer.split("\n").map((line, index) => (
               <p key={index}>{line}</p>
             ))}
           </div>
 
           {currentPlan.addons && (
-            <div className={styles["addons"]}>
+            <div className={styles["plans-table-addons"]}>
               {showAddons && (
-                <div className="addons-container">
-                  <h2 className={styles["addons-container-available"]}>
+                <div className="plans-table-addons-container">
+                  <h2
+                    className={styles["plans-table-addons-container-available"]}
+                  >
                     Available Add-ons
                   </h2>
                   <TableAddonsDesktop currentPlan={currentPlan} />
@@ -60,7 +62,7 @@ const Plans = () => {
               )}
 
               <button
-                className={styles["toggle-button"]}
+                className={styles["plans-table-addons-toggle"]}
                 onClick={toggleAddons}
               >
                 {showAddons ? (
@@ -69,7 +71,7 @@ const Plans = () => {
                     <img
                       src={arrow}
                       alt="arrow"
-                      className={styles["arrow-hide"]}
+                      className={styles["plans-table-addons-arrow-hide"]}
                     />
                   </>
                 ) : (
@@ -78,7 +80,7 @@ const Plans = () => {
                     <img
                       src={arrow}
                       alt="arrow"
-                      className={styles["arrow-show"]}
+                      className={styles["plans-table-addons-arrow-show"]}
                     />
                   </>
                 )}

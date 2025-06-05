@@ -16,10 +16,9 @@
       border-bottom: 2px solid #dadce2;
       padding-bottom: 1rem;
       width: 80%;
-      box-sizing: border-box;
 
       &-browse {
-        flex: 1 1 200px;
+        flex: 1;
         min-width: 200px;
 
         &-text {
@@ -193,6 +192,6 @@
   }
   .footer-container-policies {
     padding-left: 0.2rem;
-    width: 100%;
+    width: 90%;
   }
 }
