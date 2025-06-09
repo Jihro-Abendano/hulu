@@ -52,6 +52,7 @@
 
     &-title {
       text-align: center;
+      padding-top: 1rem;
     }
 
     &-left {
@@ -59,7 +60,7 @@
       border: 1px solid #555;
       border-top: none;
       border-left: none;
-      border-right: none; // Remove full-height border
+      border-right: none;
 
       padding: 2rem;
       width: 50%;

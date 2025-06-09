@@ -5,8 +5,10 @@ const TableTabletBody = ({ currentPlan }) => {
     <tbody>
       {currentPlan.titles.map((title, i) => (
         <>
-          <tr key={i} className="table-tablet-title">
-            <td colSpan={2}>{title}</td>
+          <tr key={i}>
+            <td colSpan={2} className="table-tablet-title">
+              {title}
+            </td>
           </tr>
           <tr>
             <td className="table-tablet-left">
