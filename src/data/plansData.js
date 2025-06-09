@@ -188,6 +188,7 @@ export const plansData = {
     columns: [
       {
         label: "Basic Plan",
+        price: "LEARN MORE",
         image: dhmImage,
         values: [
           "$16.99/mo.*",
@@ -206,6 +207,7 @@ export const plansData = {
       {
         label: "Premium Plan",
         image: dhmImage,
+        price: "LEARN MORE",
         values: [
           "$29.99/mo.*",
           "Disney+, Hulu and Max",
@@ -264,6 +266,7 @@ export const plansData = {
       {
         label: "Basic Plan",
         image: hltvImage,
+        price: "82.99/MONTH",
         values: [
           "$16.99/mo.*",
           "Disney+, Hulu and Max",
@@ -281,6 +284,7 @@ export const plansData = {
       {
         label: "Premium Plan",
         image: hltvImage,
+        price: "95.99/MONTH",
         values: [
           "$29.99/mo.*",
           "Disney+, Hulu and Max",
