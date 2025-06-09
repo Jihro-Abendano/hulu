@@ -72,10 +72,11 @@
 
       &::after {
         content: "";
+
         position: absolute;
-        top: 40%; // Adjust vertically
-        right: 0; // Stick to the right edge
-        height: 30%; // Border height
+        bottom: 30%;
+        right: 0;
+        height: 30%;
         border-right: 1px solid white;
       }
     }
@@ -102,6 +103,7 @@
     }
 
     &-name {
+      padding-top: 1rem;
       border: 1px solid #555;
       border-left: none;
       border-right: none;
@@ -207,24 +209,11 @@
 @media (max-width: 420px) {
   .table-tablet {
     &-header {
-      width: 5rem;
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
-      &-label {
-        width: 8rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  .table-tablet {
-    &-header {
       width: 3rem;
       padding-left: 3.5rem;
       padding-right: 3.5rem;
       &-label {
-        width: 6rem;
+        width: 8rem;
       }
 
       &-price {
@@ -234,10 +223,27 @@
   }
 }
 
+@media (max-width: 375px) {
+  .table-tablet {
+    &-header {
+      width: 2rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      &-label {
+        width: 6rem;
+      }
+
+      &-price {
+        width: 8rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 325px) {
   .table-tablet {
     &-header {
-      width: 1rem;
+      width: 0.2rem;
 
       &-label {
         width: 2rem;
