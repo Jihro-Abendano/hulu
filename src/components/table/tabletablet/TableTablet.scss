@@ -8,14 +8,18 @@
 
 @media (max-width: 1023px) {
   .table-tablet {
-    display: flex;
+    display: table;
     align-items: center;
     flex-direction: column;
+    border-collapse: collapse;
 
     &-header {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 1rem;
+      // padding-left: 4rem;
+      // padding-right: 2rem;
 
       img {
         max-width: 100px;
@@ -37,7 +41,7 @@
         cursor: pointer;
         font-size: 0.9rem;
         font-weight: bold;
-        width: 15rem;
+        width: 18rem;
       }
 
       &-deal {
@@ -46,87 +50,156 @@
       }
     }
 
-    th {
-      width: 100%;
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
-    }
-    .price {
-      width: 19rem;
-      overflow: hidden;
-    }
-    td {
-      border: 1px solid #555;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      padding: 2rem;
-
-      font-size: 0.9rem;
+    &-title {
       text-align: center;
     }
-    .title {
-      display: block;
-      transform: translateY(-25px);
-      padding-left: 4rem;
-      width: 25rem;
-    }
 
-    .value-left {
-      display: block;
-      transform: translateX(100px);
+    &-left {
+      position: relative;
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none; // Remove full-height border
+
+      padding: 2rem;
+      width: 50%;
+      font-size: 0.9rem;
+      text-align: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 40%; // Adjust vertically
+        right: 0; // Stick to the right edge
+        height: 30%; // Border height
+        border-right: 1px solid white;
+      }
     }
-    .value-right {
-      display: block;
-      transform: translateX(-100px);
+    &-right {
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding: 2rem;
+      width: 50%;
+      font-size: 0.9rem;
+      text-align: center;
     }
   }
 
   .addons-tablet {
     display: table;
-
     border-collapse: collapse;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
   }
+
+  td {
+    width: 33%;
+  }
 }
 
 @media (max-width: 838px) {
   .table-tablet {
-    td {
-      border: 1px solid #555;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      text-align: center;
-    }
     .title {
       display: block;
-      transform: translateY(-25px);
       padding-left: 2rem;
-      width: 20rem;
     }
   }
 }
 
 @media (max-width: 786px) {
   .table-tablet {
-    th {
-      width: 60%;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
+    &-header {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      width: 10rem;
     }
-    td {
-      padding: 2rem 1rem;
-      .title {
-        display: inline-block;
-        transform: translateY(-25px);
+  }
+}
+
+@media (max-width: 767px) {
+  .table-tablet {
+    &-left {
+      &::after {
+        content: none;
       }
     }
   }
 }
 
-@media (max-width: 605px) {
+@media (max-width: 676px) {
+  .table-tablet {
+    &-header {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      width: 10rem;
+
+      &-price {
+        width: 15rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  .table-tablet {
+    &-header {
+      width: 8rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      &-price {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .table-tablet {
+    &-header {
+      width: 5rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      &-label {
+        width: 8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .table-tablet {
+    &-header {
+      width: 3rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      &-label {
+        width: 6rem;
+      }
+
+      &-price {
+        width: 9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .table-tablet {
+    &-header {
+      width: 1rem;
+
+      &-label {
+        width: 2rem;
+      }
+
+      &-price {
+        width: 8rem;
+      }
+    }
+  }
 }

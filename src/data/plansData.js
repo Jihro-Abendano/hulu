@@ -3,13 +3,13 @@ import dheImage from "../assets/dhe.png";
 import dhmImage from "../assets/dhm.png";
 import hltvImage from "../assets/hltv.png";
 
-//import check from "../assets/check.svg";
+// import check from "../assets/check.svg";
 export const plansData = {
   dh: {
     titles: [
       "Monthly Price",
       "Subscriptions included in each plan",
-      "Hulu streaming library with tons of episodes and movies",
+      "Hulu streaming library with tons of episodes and movies ⓘ",
       "Endless entertainment with Disney+",
       "Most new episodes on Hulu the day after they air",
       "Access to award-winning Hulu Originals",
@@ -89,7 +89,7 @@ export const plansData = {
     titles: [
       "Monthly price. Save up to $19.98/mo.*",
       "Subscriptions included in each plan",
-      "Hulu streaming library with tons of episodes and movies",
+      "Hulu streaming library with tons of episodes and movies ⓘ",
       "Endless entertainment with Disney+",
       "Live sports with ESPN+, now in the Hulu app",
       "Most new episodes on Hulu the day after they air†",
@@ -103,6 +103,8 @@ export const plansData = {
     columns: [
       {
         label: "Basic Plan",
+        price: "$16.99/MONTH",
+        deal: "SAVE 46%",
         image: dheImage,
         values: [
           "$16.99/mo.*",
@@ -121,6 +123,8 @@ export const plansData = {
       },
       {
         label: "Premium Plan",
+        price: "$26.99/MONTH",
+        deal: "SAVE 42%",
         image: dheImage,
         values: [
           "$26.99/mo.*",
@@ -171,7 +175,7 @@ export const plansData = {
     titles: [
       "Monthly price. Save up to $21.98/mo.*",
       "Subscriptions included in each plan",
-      "Hulu streaming library with tons of episodes and movies",
+      "Hulu streaming library with tons of episodes and movies ⓘ",
       "Endless entertainment with Disney+",
       "Access to Max. Watch HBO content in the Hulu app††Access to Max. Watch HBO content in the Hulu app††",
       "Most new episodes on Hulu the day after they air†",
@@ -242,7 +246,7 @@ export const plansData = {
     titles: [
       "Monthly price",
       "Subscriptions included in each plan",
-      "Hulu streaming library with tons of episodes and movies",
+      "Hulu streaming library with tons of episodes and movies ⓘ",
       "Endless entertainment with Disney+",
       "Live sports with ESPN+, now in the Hulu app",
       "Most new episodes on Hulu the day after they air†",

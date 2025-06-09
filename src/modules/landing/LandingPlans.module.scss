@@ -28,9 +28,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70rem;
+    width: 60%; //table width
 
-    .disclaimer {
+    &-disclaimer {
       margin: 1.3rem auto 0 auto;
       font-size: 0.65rem;
       color: #ccc;
@@ -42,10 +42,10 @@
       }
     }
 
-    .addons {
+    &-addons {
       margin-top: 2rem;
 
-      .toggle-button {
+      &-toggle {
         margin-left: auto;
         margin-right: auto;
         background-color: transparent;
@@ -57,13 +57,14 @@
         border: 1px solid #555;
         border-left: none;
         border-right: none;
+
         width: 100%;
       }
 
-      .arrow-show {
+      &-arrow-show {
         padding-left: 5px;
       }
-      .arrow-hide {
+      &-arrow-hide {
         transform: rotate(180deg);
       }
       &-container-available {
@@ -78,7 +79,7 @@
 @media (max-width: 1180px) {
   .plans {
     &-table {
-      width: 60rem;
+      width: 60rem; //breakpoint
     }
   }
 }
@@ -92,11 +93,10 @@
     &-table {
       width: 100%;
 
-      .addons {
+      &-addons {
         h2 {
           text-align: center;
           padding-left: 0;
-          width: 100%;
           font-size: 1.5rem;
         }
 
@@ -110,8 +110,18 @@
         }
       }
 
-      .disclaimer {
+      &-disclaimer {
         text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .plans {
+    &-top-text {
+      &-title {
+        font-size: 2rem;
       }
     }
   }
@@ -119,18 +129,16 @@
 
 @media (max-width: 375px) {
   .plans {
-    padding: 0;
-  }
-  .plans-table {
-    th,
-    td {
-      font-size: 0.3rem;
+    &-top-text {
+      place-items: center;
+      &-title {
+        font-size: 1.5rem;
+      }
     }
 
-    .disclaimer {
-      p {
-        line-height: 1;
-        padding-left: 1rem;
+    &-table {
+      &-disclaimer {
+        place-items: center;
       }
     }
   }
