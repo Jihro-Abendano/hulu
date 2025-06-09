@@ -34,7 +34,11 @@
     padding-bottom: 1rem;
     max-width: max-content;
     width: 60%;
-    color: gray;
+    color: #6a6b6d;
+
+    &-link {
+      color: #6a6b6d;
+    }
   }
 
   &-channel {

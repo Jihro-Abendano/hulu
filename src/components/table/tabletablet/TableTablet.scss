@@ -9,8 +9,6 @@
 @media (max-width: 1023px) {
   .table-tablet {
     display: table;
-    align-items: center;
-    flex-direction: column;
     border-collapse: collapse;
 
     &-header {
@@ -18,6 +16,7 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      padding-bottom: 2rem;
       // padding-left: 4rem;
       // padding-right: 2rem;
 
@@ -53,6 +52,10 @@
     &-title {
       text-align: center;
       padding-top: 1rem;
+      border: 1px solid #555;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
     }
 
     &-left {
@@ -92,13 +95,47 @@
     display: table;
     border-collapse: collapse;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
-  }
 
-  td {
-    width: 33%;
+    &-header {
+      padding-bottom: 2rem;
+    }
+
+    &-name {
+      border: 1px solid #555;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &-basic {
+      position: relative;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30%; // Adjust vertically
+        right: 0; // Stick to the right edge
+        height: 40%; // Border height
+        border-right: 1px solid white;
+      }
+    }
+
+    &-premium {
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
   }
 }
 
@@ -124,6 +161,14 @@
 @media (max-width: 767px) {
   .table-tablet {
     &-left {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .addons-tablet {
+    &-basic {
       &::after {
         content: none;
       }

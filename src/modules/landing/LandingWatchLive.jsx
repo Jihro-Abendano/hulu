@@ -26,7 +26,10 @@ const LandingWatchLive = () => {
         any) unless canceled. Cancel anytime. Regional restrictions, blackouts
         and Live TV terms apply. Access content from each service separately.
         Location data required to watch certain content. Offer valid for
-        eligible subscribers only. See details.
+        eligible subscribers only.{" "}
+        <a href="/" className={styles["watch-live-disclaimer-link"]}>
+          See details.
+        </a>
       </p>
 
       <a href="/" className={styles["watch-live-channel"]}>
