@@ -8,7 +8,7 @@
 
 @media (max-width: 1023px) {
   .table-tablet {
-    display: flex;
+    display: table;
     align-items: center;
     flex-direction: column;
     border-collapse: collapse;
@@ -18,8 +18,8 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
-      padding-left: 4rem;
-      padding-right: 2rem;
+      // padding-left: 4rem;
+      // padding-right: 2rem;
 
       img {
         max-width: 100px;
@@ -54,7 +54,27 @@
       text-align: center;
     }
 
-    &-left,
+    &-left {
+      position: relative;
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none; // Remove full-height border
+
+      padding: 2rem;
+      width: 50%;
+      font-size: 0.9rem;
+      text-align: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 40%; // Adjust vertically
+        right: 0; // Stick to the right edge
+        height: 30%; // Border height
+        border-right: 1px solid white;
+      }
+    }
     &-right {
       border: 1px solid #555;
       border-top: none;
@@ -86,7 +106,6 @@
     .title {
       display: block;
       padding-left: 2rem;
-      // width: 20rem;
     }
   }
 }
@@ -98,18 +117,20 @@
       padding-right: 5rem;
       width: 10rem;
     }
-
-    // td {
-    //   padding: 2rem 1rem;
-    //   .title {
-    //     display: inline-block;
-    //     // transform: translateY(-25px);
-    //   }
-    // }
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
+  .table-tablet {
+    &-left {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 676px) {
   .table-tablet {
     &-header {
       padding-left: 3rem;
@@ -123,7 +144,7 @@
   }
 }
 
-@media (max-width: 519px) {
+@media (max-width: 548px) {
   .table-tablet {
     &-header {
       width: 8rem;
@@ -170,7 +191,7 @@
 @media (max-width: 325px) {
   .table-tablet {
     &-header {
-      width: 2rem;
+      width: 1rem;
 
       &-label {
         width: 2rem;
