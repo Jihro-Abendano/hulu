@@ -1,5 +1,9 @@
 import React from "react";
+import FooterList from "./FooterList";
+import FooterSocials from "./FooterSocials";
+import FooterPolicies from "./FooterPolicies";
 import Dropdown from "../../components/dropdown/Dropdown";
+
 import styles from "./Footer.module.scss";
 import fb from "../../assets/footer/facebook.svg";
 import ig from "../../assets/footer/instagram.svg";
@@ -58,81 +62,16 @@ const Footer = () => {
   return (
     <footer>
       <div className={styles["footer-container"]}>
-        <div className={styles["footer-container-row"]}>
-          <div className={styles["footer-container-row-browse"]}>
-            <h3 className={styles["footer-container-row-browse-text"]}>
-              Browse
-            </h3>
-            <div className={styles["footer-container-row-browse-columns"]}>
-              <ul>
-                {browseLinks1.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
-                {browseLinks2.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
-                {browseLinks3.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
-                {browseLinks4.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-
-          <div className={styles["footer-container-row-box"]}>
-            <div className={styles["footer-container-row-box-help"]}>
-              <h3 className={styles["footer-container-row-box-help-text"]}>
-                Help
-              </h3>
-              <ul>
-                {helpLinks.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
-            <div className={styles["footer-container-row-box-about"]}>
-              <h3>About Us</h3>
-              <ul>
-                {aboutLinks.map((i) => {
-                  return (
-                    <li>
-                      <a href="/">{i}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <FooterList
+          browseLinks1={browseLinks1}
+          browseLinks2={browseLinks2}
+          browseLinks3={browseLinks3}
+          browseLinks4={browseLinks4}
+          helpLinks={helpLinks}
+          aboutLinks={aboutLinks}
+        />
+        <FooterSocials fb={fb} ig={ig} x={x} yt={yt} />
+        <FooterPolicies policyLinks={policyLinks} />
 
         <Dropdown
           className
@@ -143,32 +82,6 @@ const Footer = () => {
           helpLinks={helpLinks}
           aboutLinks={aboutLinks}
         />
-
-        <div className={styles["footer-container-socials"]}>
-          <a href="https://www.facebook.com">
-            <img src={fb} alt="Facebook" />
-          </a>
-          <a href="https://www.instagram.com">
-            <img src={ig} alt="Instagram" />
-          </a>
-          <a href="https://twitter.com">
-            <img src={x} alt="X" />
-          </a>
-          <a href="https://www.youtube.com">
-            <img src={yt} alt="YouTube" />
-          </a>
-        </div>
-        <div className={styles["footer-container-policies"]}>
-          <ul>
-            {policyLinks.map((i) => {
-              return (
-                <li>
-                  <a href="/">{i}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
       </div>
     </footer>
   );
