@@ -62,6 +62,15 @@ const Footer = () => {
   return (
     <footer>
       <div className={styles["footer-container"]}>
+        <Dropdown
+          className
+          browseLinks1={browseLinks1}
+          browseLinks2={browseLinks2}
+          browseLinks3={browseLinks3}
+          browseLinks4={browseLinks4}
+          helpLinks={helpLinks}
+          aboutLinks={aboutLinks}
+        />
         <FooterList
           browseLinks1={browseLinks1}
           browseLinks2={browseLinks2}
@@ -72,16 +81,6 @@ const Footer = () => {
         />
         <FooterSocials fb={fb} ig={ig} x={x} yt={yt} />
         <FooterPolicies policyLinks={policyLinks} />
-
-        <Dropdown
-          className
-          browseLinks1={browseLinks1}
-          browseLinks2={browseLinks2}
-          browseLinks3={browseLinks3}
-          browseLinks4={browseLinks4}
-          helpLinks={helpLinks}
-          aboutLinks={aboutLinks}
-        />
       </div>
     </footer>
   );
