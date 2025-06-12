@@ -65,3 +65,52 @@
     width: 100%;
   }
 }
+
+@media (max-width: 694px) {
+  .tv-card {
+    &-container {
+      width: 90%;
+      height: 100%;
+
+      // &-overlay {
+      //   &-description {
+      //     font-size: 1rem;
+      //   }
+      //   &-title {
+      //     font-size: 1rem;
+      //   }
+      // }
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .tv-card {
+    &-container {
+      &-overlay {
+        &-description {
+          font-size: 0.9rem;
+        }
+        &-title {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .tv-card {
+    &-container {
+      &-overlay {
+        &-description {
+          font-size: 0.5rem;
+          margin-bottom: 1rem;
+        }
+        &-title {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
