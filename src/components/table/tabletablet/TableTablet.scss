@@ -1,0 +1,257 @@
+.table-tablet {
+  display: none;
+}
+
+.addons-tablet {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .table-tablet {
+    display: table;
+    border-collapse: collapse;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 2rem;
+      // padding-left: 4rem;
+      // padding-right: 2rem;
+
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+
+      &-label {
+        font-weight: bold;
+        margin: 0;
+      }
+
+      &-price {
+        height: 2.7rem;
+        padding: 0.4rem 1rem;
+        border: none;
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: bold;
+        width: 18rem;
+      }
+
+      &-deal {
+        font-size: 0.6rem;
+        color: white;
+      }
+    }
+
+    &-title {
+      text-align: center;
+      padding-top: 1rem;
+      border: 1px solid #555;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    &-left {
+      position: relative;
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      padding: 2rem;
+      width: 50%;
+      font-size: 0.9rem;
+      text-align: center;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 30%;
+        right: 0;
+        height: 30%;
+        border-right: 1px solid white;
+      }
+    }
+    &-right {
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding: 2rem;
+      width: 50%;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+
+  .addons-tablet {
+    display: table;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+
+    &-header {
+      padding-bottom: 2rem;
+    }
+
+    &-name {
+      padding-top: 1rem;
+      border: 1px solid #555;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &-basic {
+      position: relative;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30%; // Adjust vertically
+        right: 0; // Stick to the right edge
+        height: 40%; // Border height
+        border-right: 1px solid white;
+      }
+    }
+
+    &-premium {
+      border: 1px solid #555;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 838px) {
+  .table-tablet {
+    .title {
+      display: block;
+      padding-left: 2rem;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .table-tablet {
+    &-header {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      width: 10rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .table-tablet {
+    &-left {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .addons-tablet {
+    &-basic {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 676px) {
+  .table-tablet {
+    &-header {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      width: 10rem;
+
+      &-price {
+        width: 15rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  .table-tablet {
+    &-header {
+      width: 8rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      &-price {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .table-tablet {
+    &-header {
+      width: 3rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      &-label {
+        width: 8rem;
+      }
+
+      &-price {
+        width: 9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .table-tablet {
+    &-header {
+      width: 2rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      &-label {
+        width: 6rem;
+      }
+
+      &-price {
+        width: 8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .table-tablet {
+    &-header {
+      width: 0.2rem;
+
+      &-label {
+        width: 2rem;
+      }
+
+      &-price {
+        width: 8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.highlights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+  padding: 2rem;
+
+  &-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 40rem;
+
+    &-options {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      & button {
+        background: transparent;
+        border: none;
+        border-bottom: px solid transparent;
+        color: #cccccc;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      & button.active {
+        color: white;
+        border-bottom: 4px solid white;
+      }
+
+      & button:hover {
+        color: white;
+      }
+    }
+
+    &-content {
+      color: white;
+
+      &-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      &-description {
+        font-size: 1.3rem;
+      }
+
+      &-logo {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        &-circle {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          &-image {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      &-disclaimer {
+        font-size: 0.7rem;
+        color: gray;
+
+        &-link {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+@media (max-width: 1600px) {
+  .highlights-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 30rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .highlights-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 20rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .highlights {
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 1rem;
+    background-position: center bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 20rem;
+
+    &-container {
+      padding-right: 0;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+
+      &-options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      &-content {
+        &-title {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2rem;
+          padding-top: 5rem;
+        }
+        &-description {
+          font-size: 0.9rem;
+        }
+
+        &-logo {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .highlights-container-options {
+    width: 400px;
+  }
+
+  .highlight-content {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .highlights {
+    padding-top: 0rem;
+    background-size: 120%;
+    padding-bottom: 2rem;
+  }
+  .highlights-container-content-logo-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlights-container-options {
+    align-items: left;
+  }
+}

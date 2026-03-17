@@ -1,0 +1,76 @@
+.watch-live {
+  padding: 4rem 2rem;
+  background: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &-subtitle {
+    color: #00ed82;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: -1rem;
+    padding-top: 0rem;
+  }
+
+  &-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &-description {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+  }
+
+  &-disclaimer {
+    font-size: 0.6rem;
+    padding-bottom: 1rem;
+    max-width: max-content;
+    width: 60%;
+    color: #6a6b6d;
+
+    &-link {
+      color: #6a6b6d;
+    }
+  }
+
+  &-channel {
+    font-weight: bold;
+    color: #ccc;
+  }
+}
+
+@media (max-width: 1024px) {
+  .watch-live-title {
+    width: 70%;
+  }
+
+  .description {
+    width: 100%;
+    margin: 0;
+    //spacing of newline
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .description {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+.disclaimer {
+  width: 90%;
+}

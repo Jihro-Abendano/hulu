@@ -1,0 +1,60 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0rem;
+  padding: 10rem 1rem 9rem;
+  position: relative;
+  background: url("../../assets/herobg.jpeg") no-repeat top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1380px) {
+  .bg-wrapper {
+    background: url("../../assets/herobg-tab.jpeg") no-repeat top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mid-hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 849px) {
+  .hero {
+    .hero-card {
+      flex: 1 1 45%;
+      max-width: 40%;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .bg-wrapper {
+    background: url("../../assets/herobg-mobile.jpeg") no-repeat top center;
+    background-size: fill;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  p {
+    width: 15rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,106 @@
+.table-desktop {
+  display: table;
+  border-collapse: collapse;
+  th,
+  td {
+    padding: 1.5rem;
+    border: 1px solid #555;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  td:first-child {
+    text-align: left;
+  }
+
+  td:nth-child(2),
+  td:nth-child(3) {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    &-label {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &-price {
+      width: 20rem; // price button
+
+      height: 2.7rem;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 3px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    &-deal {
+      font-size: 0.6rem;
+      color: white;
+    }
+  }
+}
+
+.addons-desktop {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+
+  width: 100%; //addons width
+
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid #555;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  td:first-child {
+    text-align: left;
+    width: 30%;
+  }
+
+  td:nth-child(2),
+  td:nth-child(3) {
+    text-align: center;
+  }
+}
+@media (max-width: 1525px) {
+  .addons-desktop {
+    width: 55rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .table-desktop {
+    display: none;
+  }
+
+  .addons-desktop {
+    display: none;
+  }
+}

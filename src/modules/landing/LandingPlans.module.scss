@@ -1,0 +1,136 @@
+.plans {
+  background-color: #0b0c0f;
+  color: white;
+  padding: 2rem;
+
+  &-top-text {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &-title {
+      font-size: 2.9rem;
+      margin-bottom: 1rem;
+    }
+
+    &-subtitle {
+      font-size: 1rem;
+      margin: 0.6rem 0;
+    }
+
+    &-switch {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0.6rem 0;
+    }
+  }
+  &-table {
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%; //table width
+
+    &-disclaimer {
+      margin: 1.3rem auto 0 auto;
+      font-size: 0.65rem;
+      color: #ccc;
+      width: 100%;
+
+      p {
+        line-height: 1;
+        margin: 0.2rem 0;
+      }
+    }
+
+    &-addons {
+      margin-top: 2rem;
+
+      &-toggle {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        padding: 1rem;
+        border: 1px solid #555;
+        border-left: none;
+        border-right: none;
+
+        width: 100%;
+      }
+
+      &-arrow-show {
+        padding-left: 5px;
+      }
+      &-arrow-hide {
+        transform: rotate(180deg);
+      }
+      &-container-available {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .plans {
+    &-table {
+      width: 60rem; //breakpoint
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .addons-desktop {
+    display: none;
+  }
+
+  .plans {
+    &-table {
+      width: 100%;
+
+      &-addons {
+        h2 {
+          text-align: center;
+          padding-left: 0;
+          font-size: 1.5rem;
+        }
+      }
+
+      &-disclaimer {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .plans {
+    &-top-text {
+      &-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .plans {
+    &-top-text {
+      place-items: center;
+      &-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-table {
+      &-disclaimer {
+        place-items: center;
+      }
+    }
+  }
+}
